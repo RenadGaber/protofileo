@@ -1,0 +1,375 @@
+body{
+    background:linear-gradient(to right,#38034e,#450236);
+}
+body:before{
+    content: "";
+    position: absolute;
+    inset: 40% -60% 0 -60%;
+    opacity: 0.3;
+    pointer-events: none;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(225, 225, 225, 0);
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+
+}
+.navbar a{
+    text-decoration: none;
+    color: #461149;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color .3s;
+}
+.navbar a :hover{
+    color: #0077cc;
+}
+#home{
+    padding: 10px 50px;
+    text-align: center;
+    background-color: #8b5780;
+}
+#home h1{
+    font-size: 36px;
+    color :#333;
+}
+#home p{
+    font-size: 18px;
+    color: #262121;
+    margin-top:10px ;
+}
+profile-img{
+    width:  120px;
+    height: auto;
+    border-radius:50% ;
+    margin-top: 20px;
+}
+.highlight{
+    color:#7500a7;
+    font-weight: bold;
+}
+.home-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 40px;
+    background-color: #8b5480;
+    gap: 40px;
+}
+.box-left img{
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform .3s ease;
+}
+.box-left img:hover{
+    transform: scale(1.05);
+}
+.box-right{
+    max-width: 500px;
+    color: #333;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.5s;
+
+}
+@keyframes fadeInUp{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
+    
+
+.box-right h2{
+    font-size: 18px;
+    line-height: 1.6;
+}
+.hobbies-section{
+    padding: 80px 40px;
+    text-align: center;
+    background-color: #8b5780;
+}
+.hobbies-section h2{
+    font-size: 32px;
+    color: #4e4a4a;
+    margin-bottom: 40px;
+   
+}
+.hobbies-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    
+}
+.hobbies-item{
+    width: 220px;
+    transition: transform .3s ease;
+}
+.hobbies-item img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius:12px ;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform .3s ease;
+}
+.hobbies-item:hover img{
+    transform: scale(1.05);
+}
+.caption{
+    margin-top:  10px; 
+    font-size: 16px;
+    color: #444;
+    font-weight: bold;
+    transition: .3s ease;
+}
+.hobbies-item:hover .caption{
+    color:#ff4093;
+    transform: scale(1.05);
+    text-shadow: 0 0 8px rgba(224, 234, 26, 0.5);
+   transition: .3s ease;
+}
+.birthday-section{
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #8b5780;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+.cake{
+    position: relative;
+    width: 150px;
+    height: 100px;
+    background: #ffb6c1;
+    margin: 40px auto 10px ;
+    border-radius:10px 10px 0 0; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.candle{
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 10px;
+    height: 40px;
+    background: #fff;
+    border-radius: 5px;
+}
+.candle::after{
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: orange;
+    border-radius: 50%;
+    box-shadow: 0 0 10px orange;
+    animation: flicker .5s infinite alternate;
+}
+@keyframes flicker{
+   0% {opacity: 1;transform: scale(1);}
+   100%{opacity: .6;transform: scale(1.1);}
+}
+.birthday-msg{
+    font-size: 24px;
+    color: #d63384;
+    font-weight: bold;
+}
+textarea{
+    width: 300px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.birthday-link{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #931e59;
+    color: rgb(103, 50, 50);
+    text-decoration: none;
+    border-radius:8px ;
+    font-weight: bold;
+    transition: background  0.3s;
+}
+.birthday-link:hover{
+    background-color: #b52d6a;
+}
+.Tanks-message{
+    font-size: 18px;
+    color: rgb(44, 44, 40);
+    margin-top: 20px;
+}
+html{
+    scroll-behavior: smooth;
+}
+.send-button{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ffb6c1;
+    color: #000;
+    text-emphasis: none;
+    border-radius: 8px;
+    font-size: blod;
+    transition: background .3s;
+}
+.send-button:hover{
+    background-color: rgb(170, 55, 162);
+}
+.birthday-text{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d19ea5;
+    color: #000;
+    text-emphasis: none;
+    border-radius: 8px;
+    font-size: blod;
+    transition: background .3s;
+}
+.birthday-text:hover{
+    background-color: rosybrown;
+}
+.Conatact-secyion {
+  padding: 80px 20px;
+  background-color: #96607469;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.Conatact-form {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.Conatact-form input,
+.Conatact-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.Conatact-form button {
+  background-color: #d63384;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.Conatact-form button:hover {
+  background-color: #b52d6a;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+
+.social-icons a {
+  font-size: 32px;
+  margin: 0 15px;
+  color: #333;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #d63384;
+  transform: scale(1.3);
+}
+.travel-section {
+  padding: 80px 20px;
+  background-color: #d3f0ff31;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.slider-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.slide {
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.slide:hover {
+  transform: scale(1.05);
+}
+
+.slide img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.caption {
+  padding: 10px;
+  background-color: #ffffff30;
+  font-weight: bold;
+  color: #333;
+}
+.cv-section {
+  padding: 80px 20px;
+  background-color: #f3f3f348;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.cv-container {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.cv-box {
+  background-color: rgba(138, 156, 194, 0.785);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.cv-box h3 {
+  margin-bottom: 10px;
+  color: #d63384;
+}
+
+.cv-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cv-box ul li::before {
+  content: " ";
+  margin-right: 6px;
+  color: green;
+}
